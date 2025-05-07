@@ -4,7 +4,7 @@ android {
     compileSdkVersion 26
     buildToolsVersion "25.0.2"
     defaultConfig {
-        applicationId "monitor.mobie.hdy.im"
+        applicationId "com.monitor.mobie"       // 包名
         minSdkVersion 19
         targetSdkVersion 26
         versionCode 4
