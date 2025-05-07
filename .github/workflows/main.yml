@@ -36,7 +36,7 @@ jobs:
         run: ./gradlew clean assembleRelease --no-daemon
 
       - name: Upload APK
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v2  # 使用v2版本
         with:
           name: app-release.apk
           path: app/build/outputs/apk/release/app-release.apk
