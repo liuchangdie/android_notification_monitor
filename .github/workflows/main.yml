@@ -12,13 +12,13 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4.6.2
+        uses: actions/checkout@v3
 
       - name: Set up JDK 17
-        uses: actions/setup-java@v4.6.2
+        uses: actions/setup-java@v3
         with:
-          distribution: 'temurin' # 推荐的JDK
-          java-version: '17'      # 你的项目的JDK版本
+          distribution: 'temurin'
+          java-version: '17'
 
       - name: Install Android SDK
         run: |
