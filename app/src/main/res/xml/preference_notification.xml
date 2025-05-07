@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <SwitchPreference
+        android:defaultValue="false"
+        android:key="customListen"
+        android:summary="自定义选择要监听的应用"
+        android:title="监听自定义应用" />
+    <Preference
+        android:key="list"
+        android:dependency="customListen"
+        android:layout="@layout/application_list_layout" />
+
+
+</PreferenceScreen>
