@@ -47,7 +47,7 @@ public class EmailProvider extends PushProvider {
 
                 //设置一封草稿邮件
                 Draft draft = new Draft()
-                        .setNickname("恶搞大王手机通知转发器")                      //发件人昵称
+                        .setNickname("手机通知转发器手机通知转发器")                      //发件人昵称
                         .setTo(receiver)                        //收件人邮箱
                         .setSubject(title)             //邮件主题
                         .setText(packageName + ":" + text);                 //邮件正文
@@ -71,7 +71,7 @@ public class EmailProvider extends PushProvider {
 
     @Override
     public void sendTest() {
-        send("恶搞大王手机通知转发器通知测试","测试内容","测试内容");
+        send("手机通知转发器手机通知转发器通知测试","测试内容","测试内容");
     }
 
 

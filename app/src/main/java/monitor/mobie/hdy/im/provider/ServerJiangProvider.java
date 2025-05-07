@@ -48,7 +48,7 @@ public class ServerJiangProvider extends PushProvider {
     private void sendTest(String SCKEY){
         String[] spilt = spilt(SCKEY);
         for (int i = 0;i<spilt.length;i++) {
-            send(spilt[i], "恶搞大王通知转发器Server酱测试推送"+i, new StringBuilder(getContext().getResources().getString(R.string.test_messgae)));
+            send(spilt[i], "手机通知转发器通知转发器Server酱测试推送"+i, new StringBuilder(getContext().getResources().getString(R.string.test_messgae)));
         }
     }
 

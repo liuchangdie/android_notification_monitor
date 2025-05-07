@@ -239,7 +239,7 @@ public class PushSettingFrament extends PreferenceFragment {
                     provider.sendTest();
                     ToastUtils.toast(PushSettingFrament.this.getActivity(),"发送测试完成");
                 } else {
-                    ToastUtils.toast(PushSettingFrament.this.getActivity(),"请输入SCKEY");
+                    ToastUtils.toast(PushSettingFrament.this.getActivity(),"请输入SCKEY-XXX");
                 }
                 return true;
             }

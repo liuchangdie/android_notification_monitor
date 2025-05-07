@@ -1,6 +1,6 @@
 <resources>
-    <string name="app_name">恶搞大王通知转发器</string>
-    <string name="author">恶搞大王</string>
+    <string name="app_name">手机通知转发器通知转发器</string>
+    <string name="author">手机通知转发器</string>
     <string name="version">4.4</string>
 
     <string name="about">本程序完全免费开源</string>
@@ -13,9 +13,9 @@
     <string name="action_settings">Settings</string>
     <string name="empty">当前为空</string>
 
-    <string name="test_messgae">欢迎使用恶搞大王通知转发器！本转发器完全开源免费使用，请勿用于任何的非法用途，软件更新详情请查看官方网站[ https://github.com/egdw/mobile_monitor_android_simple ]</string>
+    <string name="test_messgae">欢迎使用手机通知转发器通知转发器！本转发器完全开源免费使用，请勿用于任何的非法用途，软件更新详情请查看官方网站[ https://github.com/egdw/mobile_monitor_android_simple ]</string>
     <string name="description">
-        欢迎使用恶搞大王通知转发器！本转发器完全开源免费使用，请勿用于任何的非法用途。\n
+        欢迎使用手机通知转发器通知转发器！本转发器完全开源免费使用，请勿用于任何的非法用途。\n
         本工具的初衷刚开始只是为了方便自身的生活，后来发现效果不错于是决定开源出去希望能帮助更多的人。\n\n
         目的：对于一个多张手机卡的人来说有时候携带好几个手机实在太麻烦，我为了解决这个问题于是开发这个工具能够监听Android手机的通知栏并将数据转发到微信或自身的服务器上。这样我就可以远程接收到短信或者电话的通知了！\n
         \n
