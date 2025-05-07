@@ -1,32 +1,42 @@
-name: Android CI
+name: Android APK Build
 
 on:
   push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+    branches:
+      - main
+  workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    
+
     steps:
-      - uses: actions/checkout@v4
-      
-      - name: Set up JDK
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up JDK 17
         uses: actions/setup-java@v3
         with:
-          java-version: '17'
           distribution: 'temurin'
-          
-      - name: Grant execute permission for gradlew
-        run: chmod +x gradlew
-      
-      - name: Build APK
-        run: ./gradlew assembleDebug
-      
+          java-version: '17'
+
+      - name: Install Android SDK
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y wget unzip
+          wget https://dl.google.com/android/repository/commandlinetools-linux-9123335_latest.zip -O cmdline-tools.zip
+          mkdir -p $HOME/android-sdk/cmdline-tools
+          unzip cmdline-tools.zip -d $HOME/android-sdk/cmdline-tools
+          export ANDROID_SDK_ROOT=$HOME/android-sdk
+          export PATH=$ANDROID_SDK_ROOT/cmdline-tools/bin:$ANDROID_SDK_ROOT/cmdline-tools/cmdline-tools/bin:$PATH
+          yes | sdkmanager --licenses
+          sdkmanager --install "platform-tools" "platforms;android-33" "build-tools;33.0.2"
+
+      - name: Build APK (Release)
+        run: ./gradlew clean assembleRelease --no-daemon
+
       - name: Upload APK
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@latest  # 使用最新稳定版
         with:
-          name: app-debug
-          path: app/build/outputs/apk/debug/app-debug.apk
+          name: app-release.apk
+          path: app/build/outputs/apk/release/app-release.apk
